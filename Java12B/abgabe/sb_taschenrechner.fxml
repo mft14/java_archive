@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="190.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="java12btaschenrechner.FXMLController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.0" minWidth="10.0" prefWidth="254.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="188.0" minWidth="10.0" prefWidth="133.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="69.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="131.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="1. Zahl" />
+            <TextField fx:id="tfZahl2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="tfZahl1" GridPane.columnIndex="1" />
+            <Label text="2. Zahl" GridPane.rowIndex="1" />
+            <Label text="Ergebnis" GridPane.rowIndex="2" />
+            <Label fx:id="lblErgebnis" text="..." textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <VBox alignment="CENTER_LEFT" prefHeight="170.0" prefWidth="159.0" spacing="10.0" GridPane.columnIndex="1">
+         <children>
+            <RadioButton fx:id="rbAddieren" mnemonicParsing="false" onAction="#berechnenKlick" selected="true" text="Addieren">
+               <toggleGroup>
+                  <ToggleGroup fx:id="rechenoperatoren" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbSubtrahieren" mnemonicParsing="false" onAction="#berechnenKlick" text="Subtrahieren" toggleGroup="$rechenoperatoren" />
+            <RadioButton fx:id="rbMultiplizieren" mnemonicParsing="false" onAction="#berechnenKlick" text="Multiplizieren" toggleGroup="$rechenoperatoren" />
+            <RadioButton fx:id="rbDividieren" mnemonicParsing="false" onAction="#berechnenKlick" text="Dividieren" toggleGroup="$rechenoperatoren" />
+         </children>
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="2">
+         <children>
+            <Button mnemonicParsing="false" onAction="#berechnenKlick" text="Berechnen" />
+            <Button mnemonicParsing="false" onAction="#zuruecksetzenKlick" text="Zurücksetzen" />
+            <Button mnemonicParsing="false" onAction="#beendenKlick" text="Beenden" />
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</GridPane>

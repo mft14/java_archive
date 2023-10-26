@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="176.0" prefWidth="304.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="java12b.FXMLController">
+   <children>
+      <Label text="Label">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="ausgabe" onKeyPressed="#tooltip" onMouseEntered="#tooltip" onMouseExited="#tooltipAus" text="Label">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <effect>
+            <Lighting bumpInput="$null">
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+      <Button mnemonicParsing="false" onAction="#drehAnimation" text="Text setzen" />
+      <Button mnemonicParsing="false" onAction="#schaltflaecheKlick" text="Schließen" />
+   </children>
+</FlowPane>

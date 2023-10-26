@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="151.0" prefWidth="387.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="java12b.FXMLController">
+   <children>
+      <Button fx:id="btnTextKlein" mnemonicParsing="false" onAction="#textKlein" text="&lt;" />
+      <Button id="btnTextGross" mnemonicParsing="false" onAction="#textGross" text="&gt;" />
+      <TextField fx:id="tfEingabeTextAenderer" prefHeight="25.0" prefWidth="187.0" />
+   </children>
+</FlowPane>

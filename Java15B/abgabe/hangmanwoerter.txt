@@ -1,0 +1,1 @@
+Hund,Katze,Fisch,Wolf,Huhn,Kuh,Schwein,Pferd,Henne,Vogel,Taube,11
